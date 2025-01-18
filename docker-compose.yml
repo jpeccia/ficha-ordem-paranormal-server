@@ -1,13 +1,12 @@
-version: "3.9"
+version: '3.8'
+
 services:
   postgres:
-    image: postgres:15
-    container_name: postgres_db
-    restart: always
+    container_name: ordemficha_postgres
+    image: postgres
+    ports:
+      - 5432:5432
     environment:
-      POSTGRES_USER: ${DB_USERNAME}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      SPRING_DATASOURCE_URL: ${DB_URL}
-      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
-      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: ordemfichadb
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=ordemficha
