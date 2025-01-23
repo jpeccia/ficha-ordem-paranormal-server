@@ -5,5 +5,5 @@ public record SkillDTO(
     String name,
     String description,
     String baseAttribute,
-    boolean trained
+    boolean isTrained
 ) {}

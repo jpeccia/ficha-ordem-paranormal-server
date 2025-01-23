@@ -21,7 +21,7 @@ public class SkillService {
                         skill.getName(),
                         skill.getDescription(),
                         skill.getBaseAttribute(),
-                        skill.isTrained()
+                        skill.getTrained()
                 ))
                 .toList();
     }
